@@ -10,7 +10,7 @@ def jobseeker_list(request):
     u = get_object_or_404(Jobseeker)
     marks = Jobseeker.objects.all()
     json = serializers.serialize("json", marks)
-    # return HttpResponse(json, mimetype="application/json")
-    return HttpResponse("Hello, world. You're at the polls index.")
+    return HttpResponse(json, mimetype="application/json")
+    # return HttpResponse("Hello, world. You're at the polls index.")
 
 
